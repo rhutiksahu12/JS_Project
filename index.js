@@ -1,72 +1,35 @@
+var list = document.querySelector('#list');
+var submitbtn = document.querySelector('#submit-btn')
+var inputtext = document.querySelector('#enterTodo');
 
-function newElement() {
-    // var li = document.createElement("li");
-    // var inputValue = document.getElementById("addTodo").value;
-    // var t = document.createTextNode(inputValue);
-    // li.appendChild(t);
-    // if (inputValue === '') {
-    //   alert("Input is Empty");
-    // } else {
-    //   document.getElementById("list").appendChild(li);
-    // }
-    // document.getElementById("addTodo").value = "";
-  
-    // var span = document.createElement("SPAN");
-    // var txt = document.createTextNode("\u00D7");
-    // span.className = "close";
-    // span.appendChild(txt);
-    // li.appendChild(span);
-  
-    // for (i = 0; i < close.length; i++) {
-    //   close[i].onclick = function() {
-    //     var div = this.parentElement;
-    //     div.style.display = "none";
-    //   }
-    // }
+// console.log(list, submit, input)
 
-    var input= document.getElementById('addtodo')
-
-    var submit = document.getElementById('submit')
-
-    var todoList = document.getElementById('todoList')
-
-    let todos = []; 
-
-    submit.addEventListener('submit', 
-    function(event){
-      event.preventDefault();
-      addTodo(input.value)
-
+function addTodo (){
+    // e.preventDefault();
+    let text = inputtext.value;
+    console.log(text)
+    console.log('clicked')
+    if (text == ''){
+        alert('please enter some text in the field below')
+    }
+    else{
+        let todo2 = document.createElement('li');
+        let text2 = document.createTextNode(text)
+        // list.appendchild(todo)
+        // let todo = `${text}`
+        todo2.appendChild(text2)
+        todo2.classList.add('list-group-item')
+        list.append(todo2)
+        
+        
     }
     
-    )
-
-    function addTodo(item){
-
-      if(item=='')
-        alert("please do not leave the box empty")
-      else{
         
-        const todo= {
-          ID: Date.now(),
-          name: item,
-          completed: false,
-
-        }
-        todos.push(todo);
-        addToLocalStorage(todos);
-
-        input.value= "";
+    
 
 
-      }
-    }
-
-
-
-
-
-
-
-
-  }
+}
+submitbtn.addEventListener('click', (e)=>{
+    e.preventDefault()
+    addTodo()
+})

@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.corousel-container {
+    width: 60%;
+    margin: auto;
+    
+ 
+}
+.corousel-item{
+    display: none;
+}
+
+.corousel-item>img{
+    width: 200px;
+    height: 200px;
+}
+.corousel-selected {
+    display: block;
+}
+.corousel-slide {
+    display: flex;
+   flex-direction: column; 
+}

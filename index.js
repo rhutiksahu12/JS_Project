@@ -33,16 +33,12 @@ function addTodo() {
 
     li.append(removebtn);
     li.append(editbtn);
-    removebtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      let target = e.target;
-      target.parentElement.remove();
-    });
-    editbtn.addEventListener("click", function (e) {
-      e.stopPropagation();
-      inputtext.value = e.target.parentElement.innerText;
-      console.log(text)
-    });
+    //
+    // editbtn.addEventListener("click", function (e) {
+    //   e.stopPropagation();
+    //   inputtext.value = e.target.parentElement.innerText;
+    //   console.log(text)
+    // });
 
     li.classList.add("list-group-item");
     li.onclick = function () {
@@ -53,7 +49,7 @@ function addTodo() {
       }
     };
   }
-  inputtext.value = ""
+  inputtext.value = "";
 }
 
 // addTodo();v
@@ -62,6 +58,17 @@ submitbtn.addEventListener("click", (e) => {
   addTodo();
 });
 
+let list = document.querySelector("#list");
+list.addEventListener("click", (e) => {
+  e.stopPropagation();
+  if (e.target.classList.contains("btn-danger")) {
+    let target = e.target;
+    target.parentElement.remove();
+  }
+  else if (e.target.classList.contains("btn-primary")){
+    inputtext.value = e.target.parentElement.innerText;
+  }
+});
 // list.addEventListener("click", function (e) {
 //   if (e.target && e.targetName == "li") {
 //     console.log(e.target.innerText + "was");

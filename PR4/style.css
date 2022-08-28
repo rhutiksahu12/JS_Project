@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.title {
+
+}
+
+.img {
+    width: 100px;
+    height: 150px;
+    margin: 10px 8px;
+    padding : 15px;
+    border-radius: 3px;
+    background-color: rgba(247, 242, 238, 0.753);
+    scroll-behavior: smooth;
+    
+    
+}
+
+img:hover {
+    width: 150px;
+    height: 225px;
+    background-color: rgb(255, 48, 7);
+    cursor: pointer;
+}

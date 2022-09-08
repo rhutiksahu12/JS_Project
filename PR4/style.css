@@ -4,14 +4,53 @@
     flex-direction: column;
     text-align: center;
 }
-.title {
+.movietitle {
+    background-color: rgba(234, 224, 215, 0.753);
+    margin:0;
+    
+
+}
+.searchform {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.sorting {
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 3px;
+
+}
+
+.option {
+    background-color: rgb(238, 229, 229);
+}
+
+
+.searchbox {
+    background-color: bisque;
+    padding: 3px;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 20px;
+
+}
+
+.hide {
+    display: none;
+}
+
+.h3{
 
 }
 
 .img {
     width: 100px;
     height: 150px;
-    margin: 10px 8px;
+    margin: 10px 8px 0px 8px;
     padding : 15px;
     border-radius: 3px;
     background-color: rgba(247, 242, 238, 0.753);
